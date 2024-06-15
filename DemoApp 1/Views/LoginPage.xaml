@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoApp_1.Views.LoginPage"
+             Background="#00643b"
+             Title="LoginPage"
+             NavigationPage.HasNavigationBar="False">
+    <VerticalStackLayout>
+     <Image
+      Source="Logo.png"
+      HeightRequest="170"
+      Aspect="AspectFit"/>
+        <Grid Margin="30,80,0,20" ColumnDefinitions=".9*,.1*">
+            <Entry 
+                Placeholder="Usuario"
+                x:Name="entLoginEmail"
+                VerticalOptions="Center"
+            />
+        </Grid>
+        <Grid Margin="30,80,0,70" ColumnDefinitions=".9*, .1*">
+            <Entry 
+                Placeholder="Contraseña"
+                IsPassword="True"
+                x:Name="entLoginPassword"
+                />
+        </Grid>
+
+        <Grid Margin="30,80,0,20" ColumnDefinitions=".9*,.1*">
+            <Button
+             BackgroundColor="#6d14dd"
+             Text="Ingresar" 
+             TextColor="White"   
+             x:Name="btnIngresar"
+             Clicked="btnIngresar_Clicked"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

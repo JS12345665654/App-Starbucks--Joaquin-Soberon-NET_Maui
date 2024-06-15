@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoApp_1.MainPage"
+             BackgroundColor="#00643b"
+             NavigationPage.HasNavigationBar="False">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Image
+            Grid.Row="0"
+            Grid.Column="0"
+            Aspect="AspectFit"
+            Margin="10,10,0,0"
+            HeightRequest="95"
+            Source="logo.png"
+        />
+        <VerticalStackLayout
+            Grid.Row="0"
+            Grid.Column="1"
+            VerticalOptions="Center"
+            HorizontalOptions="End"
+            Margin="60,10,10,0">
+            <Button 
+                Margin="0,10,0,0"
+                Text="A cerca del programador"
+                ImageSource="a_cerca_de.png"
+                FontSize="Micro"
+                BackgroundColor="#6d14dd"
+                CornerRadius="30"
+                TextColor="White"
+                x:Name="btn_acercade"
+                Clicked="btn_acercade_Clicked"
+                HeightRequest="20"
+                WidthRequest="280"
+            />
+            <Button 
+                Margin="0,2,-100,0"
+                Text="Llamar"
+                ImageSource="llamar.png"
+                FontSize="Micro"
+                BackgroundColor="#6d14dd"
+                CornerRadius="30"
+                TextColor="White"
+                x:Name="btn_llamar"
+                Clicked="btn_llamar_Clicked"
+                HeightRequest="20"
+                WidthRequest="150"
+            />
+            <Button 
+                Margin="0,2,-60,0"
+                Text="Enviar correo"
+                ImageSource="enviar_correo.png"
+                FontSize="Micro"
+                BackgroundColor="#6d14dd"
+                CornerRadius="30"
+                TextColor="White"
+                x:Name="btn_enviar_correo"
+                Clicked="btn_enviar_correo_Clicked"
+                HeightRequest="20"
+                WidthRequest="180"
+            />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Margin="0,10,0,0">
+            <Label
+                Text="Nuestros Productos"
+                TextColor="White"
+                Padding="40"
+                Margin="30,10,0,0"
+                FontSize="Small"
+                HorizontalTextAlignment="Center"
+            />
+            <Image
+                Aspect="AspectFill"
+                HorizontalOptions="Center"
+                Margin="20,-30,0,0"
+                HeightRequest="300"
+                WidthRequest="170"
+                Source="cartel.jpg"
+            />
+            <Button 
+                Margin="0,70,0,0"
+                Text="Salir"
+                FontSize="Micro"
+                BackgroundColor="#6d14dd"
+                CornerRadius="30"
+                TextColor="White"
+                x:Name="btn_salir"
+                Clicked="btn_salir_Clicked"
+                HeightRequest="20"
+                WidthRequest="80"
+            />
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
